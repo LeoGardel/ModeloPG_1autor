@@ -1,0 +1,93 @@
+\chapter{Introdução}
+
+O protocolo HTTP (Hypertext Transfer Protocol),
+\abbrev{HTTP}{Hypertext Transfer Protocol}
+além de linguagens como o HTML (HyperText Markup Language),
+\abbrev{HTML}{HyperText Markup Language}
+permitiram o surgimento dos primeiros navegadores web, marcando o início da chamada Web 1.0. Nesta primeira versão, que vigorou ao longo dos anos 90, seu objetivo era simplesmente prover informação, já que o conteúdo presente em sua maioria era do tipo ``somente leitura''~\cite{slidesweb}.
+
+Surge então a Web 2.0, por volta de 1999, onde o conteúdo da rede passa a ser largamente preenchido pelos usuários, através de blogs ou redes sociais, por exemplo~\cite{videoweb}. Desde então, aplicações web extremamente rentáveis (como o Facebook, que registrou um lucro líquido no segundo trimestre de 2013 de cerca de 333 milhões de dólares~\cite{facebooklucro}) instigam o surgimento de novos empreendimentos. Isso aliado com a crescente difusão dos conhecimentos necessários ao desenvolvimento de aplicações web, tornou o mercado extremamente competitivo. Tal competitividade torna a agilidade característica essencial aos novos empreendedores, na implantação e manutenção de seus negócios.
+
+\section{Motivação}
+
+Para os novos empreendimentos em computação, não faltam oportunidades ou ideias, especialmente no ambiente universitário.  Esta área é extremamente favorável a criação destes, pois as possibilidades para a inovação são inúmeras, além do baixo capital inicial demandado por tais iniciativas.
+
+Entretanto, para que consigamos colocar muitas ideias em prática, além de garantir que cada ideia seja desenvolvida em pouco tempo (essencial para garantir competitividade no mercado), os esforços no desenvolvimento das mesmas devem ser reduzidos. Para isso, é extremamente interessante que se utilize um bom \textit{framework} de desenvolvimento.
+
+Utilizar um \textit{framework} é simplesmente reutilizar código desenvolvido por terceiros, porém existe uma grande diferença entre este e as chamadas bibliotecas. Uma biblioteca é utilizada para uma função específica, complementando o fluxo de controle da sua aplicação, ao passo que os \textit{frameworks} definem este fluxo, mas permitem personalização para se atingir a funcionalidade desejada. Trata-se da chamada inversão de controle. Sendo assim, o uso de \textit{frameworks} é muito interessante para sistemas web, uma vez que o fluxo de controle destes em geral é igual ou muito semelhante~\cite{wikipediaframework}.
+
+Para que possamos entender melhor os \textit{frameworks} para sistemas web, vamos focar em suas atividades mais gerais. A grande maioria de seus fluxos se baseia, respectivamente, na recepção de requisições HTTP, no acesso ao BD (banco de dados),
+\abbrev{BD}{banco de dados}
+no tratamento dos dados recebidos pelas requisições ou pelo BD e na resposta ao usuário através de uma página HTML pertinente. Sendo assim, é interessante tornar genérica essa lógica de controle, evitando o retrabalho dos desenvolvedores. Uma vez que a ``espinha dorsal'' do sistema já está a cargo do \textit{framework}, todo o esforço de implementação fica diretamente relacionado às especificidades do projeto.
+
+Entretanto, a tarefa de escolher um \textit{framework} não é trivial, diante das inúmeras possibilidades existentes. Podemos optar pelo \textit{framework} somente com base nas linguagens a serem utilizadas, mas, a longo prazo, dificilmente esse critério resultará melhor escolha. Para fazer uma boa escolha, é interessante saber as características desejáveis em um \textit{framework} para sistemas web. É interessante que este possua:~\cite{frameworkexplain}
+\begin{itemize}
+\item uma abstração interessante como interface com o BD
+
+O código escrito na aplicação não deve ser específico para o BD a ser utilizado. Isso requer uma interface de acesso ao mesmo que abstraia as suas especificidades, permitindo que um mesmo código seja utilizado para acesso a diversos tipos de bancos de dados. Também é muito interessante a utilização de ORM (Object-relational mapping)
+\abbrev{ORM}{Object-relational mapping}
+para tornar mais amigável o manuseio de dados do BD. Além disso também é importante que o \textit{framework} permita a validação dos dados a serem persistidos de forma manutenível.
+
+\item ferramentas facilitadoras para a construção de páginas web
+
+É interessante que o \textit{framework} facilite a criação de páginas web, de forma que seja necessário pouco ou nenhum entendimento sobre linguagens como HTML ou CSS (Cascading Style Sheets).
+\abbrev{CSS}{Cascading Style Sheets}
+Para isso, devem ser fornecidas funções que automatizem a criação do código de estilo.
+
+\item um sistema eficaz de autenticação
+
+Diversos sites permitem aos usuários o acesso de forma anônima, mas boa parte deles requer autenticação. Por ser uma necessidade comum a muitos sistemas, deve ser oferecida pelo \textit{framework} de forma opcional. Dentro deste tópico estão incluídas diversas funcionalidades, como a criação de contas, recuperação das mesmas, abertura de sessão, entre outras.
+
+\item segurança
+
+Autenticação e autorização andam sempre lado a lado. Após autenticado, é necessário ter o controle sobre as operações (como leitura ou escrita) realizadas pelos usuários. O conjunto formado por usuário, informação e operação deve ser autorizado antes da ação ser executada. Uma falha de segurança pode ser, por exemplo, permitir que um usuário altere dados de algum outro, ou que acesse dados confidenciais.
+
+\item eficiência
+
+As operações realizadas pelo \textit{framework} devem ser otimizadas, especialmente no acesso aos dados do BD e no carregamento das páginas web, visando um menor tempo total de resposta do servidor. Uma das maneiras de alcançar este objetivo é permitir que os dados sejam armazenados em cache.
+
+\item método simples para criação e utilização de bibliotecas
+
+Para o desenvolvimento ágil, é essencial a reutilização de código. Sendo assim, é importante que a inclusão ou criação de bibliotecas não seja uma operação custosa.
+
+\item uma grande comunidade que o utiliza
+
+Quanto mais pessoas utilizando o \textit{framework}, melhor. Isso faz com que as bibliotecas sejam melhor revisadas e, consequentemente, atualizadas. Além disso, a busca por informação é facilitada, uma vez que a quantidade de informação disponível a respeito de um \textit{framework}, em geral, é proporcional ao tamanho da sua comunidade.
+
+\end{itemize}
+
+É importante não se ater apenas às questões relativas à implementação. Um empreendimento perfeitamente implementado, porém com baixa aceitação por seu público ou pouco rentável, representa apenas tempo e dinheiro perdidos. Para que isso não aconteça, é necessário avaliar o seu empreendimento enquanto negócio, preferencialmente antes mesmo de ser escrita a primeira linha de código.
+
+\section{Objetivo}
+
+O objetivo deste trabalho é apresentar um método moderno e ágil para planejamento e implementação de sistemas web. Entretanto, não terá um cunho puramente teórico. A partir de uma ideia, detalhada na próxima seção, será realizada a implementação (apresentada no capítulo 3) e o planejamento do negócio (apresentado no capítulo 4), até que um protótipo seja desenvolvido.
+
+\section{A ideia}
+
+Dado que será implementada uma aplicação web real, que seja algo interessante e possivelmente rentável, sendo assim passível de planejamento enquanto negócio. Observando alguns dos aplicativos web existentes para a gerência de eventos, isto é, aqueles que auxiliam os seus usuários a administrar e planejar de forma organizada eventos (como shows, festas, entre outros), é possível notar que nenhum possui todas as funcionalidades demandadas por seus usuários, obrigando-os a recorrer a sistemas complementares. Surgiu então a ideia de criar uma plataforma que auxilie de forma plena seus usuários nesse tipo de demanda.
+
+Para avaliar como e porque não existe uma plataforma completa com esta finalidade, vamos refletir sobre os tipos de eventos possíveis. Sabemos que, quanto à privacidade, os eventos podem ser abertos (públicos) ou fechados (privados), porém, quanto ao pagamento, um evento pode ser:
+\begin{itemize}
+\item fixo, onde são vendidos ingressos a preços predefinidos (ou gratuito)
+
+Esses eventos são implementados em diversos aplicativos web, como o Facebook, Lista Amiga ou Eventick, porém os dois primeiros não possuem uma funcionalidade de pagamento. Neste caso, em geral os usuários informam que o pagamento deve ser realizado através de outros sites, como o Ingresso Rápido ou o Ingresso Certo. O Eventick implementa um sistema de pagamento e possui integração com redes sociais, no entanto os usuários não podem ser convidados para um evento, eles precisam se inscrever voluntariamente para fazer parte dos mesmos.
+
+\item compartilhado, onde o custo total é dividido igualmente entre os convidados
+
+Existem alguns aplicativos simples e que dão suporte a esse tipo de eventos, porém funcionam apenas localmente, como calculadoras.
+
+\item colaborativo, onde ocorre a divisão de responsabilidades sobre itens
+
+Neste tipo de evento, o organizador define uma lista de itens a serem levados, com suas respectivas quantidades. Cada participante se responsabiliza por levar um ou mais itens no dia do evento. É importante que o valor total dos itens a serem levados por cada participante seja aproximadamente igual.
+
+Seria interessante uma ferramenta que auxiliasse neste tipo de evento por ser de difícil gerenciamento, mas não é implementado por nenhum aplicativo conhecido.
+
+\end{itemize}
+
+Além de permitir a criação e acesso à eventos, é interessante que se possa buscar por eventos de forma eficiente. Diversos algoritmos de busca podem ser implementados para realizar um bom ranqueamento dos eventos. Esses algoritmos podem ser baseados em relacionamentos (como o Facebook), em popularidade (como o Lista Amiga) ou ate por geolocalização.
+
+Nossa ideia é reunir a interação social do Facebook, o bom ranqueamento do Lista Amiga e o sistema de pagamento do Eventick, para construir um sistema único e auto suficiente. Serão implementadas também outras funcionalidades como: eventos colaborativos, eventos compartilhados, notificações por e-mail, entre outros.
+
+\section{Estruturação do documento}
+
+No capítulo 2, veremos as metodologias utilizadas no desenvolvimento do \textit{software} e os motivos de sua utilização. Em seguida, o capítulo 3 detalha a implementação através das metodologias elucidadas. O capítulo 4 apresenta o modelo de negócios desenvolvido, enquanto o capítulo 5 visa concluír o trabalho e apontar melhorias necessárias em trabalhos futuros.

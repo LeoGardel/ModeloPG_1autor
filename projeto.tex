@@ -1,0 +1,86 @@
+\documentclass[grad,pdftex,numbers]{coppetex/coppe}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{subfigure}
+\usepackage{listings}
+\usepackage{longtable}
+\usepackage{placeins}
+
+% Configure listings package
+\lstset{ %
+language=Java,                % choose the language of the code
+basicstyle=\footnotesize\sf,    % the size of the fonts that are used for the code
+numbers=left,                   % where to put the line-numbers
+numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
+stepnumber=1,                   % the step between two line-numbers. If it's 1 each line 
+                                % will be numbered
+numbersep=5pt,                  % how far the line-numbers are from the code
+showspaces=false,               % show spaces adding particular underscores
+showstringspaces=false,         % underline spaces within strings
+showtabs=false,                 % show tabs within strings adding particular underscores
+frame=single,                   % adds a frame around the code
+tabsize=4,                      % sets default tabsize to 4 spaces
+captionpos=t,                   % sets the caption-position to top
+breaklines=true,                % sets automatic line breaking
+breakatwhitespace=true,         % sets if automatic breaks should only happen at whitespace
+title=\lstname,                 % show the filename of files included with \lstinputlisting;
+                                % also try caption instead of title
+escapeinside={\%*}{*)},         % if you want to add a comment within your code
+morekeywords={}                 % if you want to add more keywords to the set
+}
+\renewcommand{\lstlistingname}{Arquivo}
+
+\makeloabbreviations
+
+\begin{document}
+  \title{Desenvolvimento Ágil e Modelo de Negócios voltados para Aplicações Web}
+  \foreigntitle{Agile Development and Business Model for Web Applications}
+  \author{Leonardo Gardel}{Valverde}
+  \advisor{Prof.}{José Ferreira}{de Rezende}{Dr.}
+
+
+  \examiner{Prof.}{José Ferreira de Rezende}{Dr.}
+  \examiner{Prof.}{Aloysio de Castro Pinto Pedroza}{Dr.}
+  \examiner{Prof.}{Jorge Lopes de Souza Leão}{Dr. Ing.}
+
+  \department{PEE}
+  \date{09}{2013}
+
+  \keyword{Sistemas Web}
+  \keyword{Ruby on Rails}
+  \keyword{MVC}
+  \keyword{TDD}
+  \keyword{RESTful}
+
+  \foreignkeyword{Web Systems}
+  \foreignkeyword{Ruby on Rails}
+  \foreignkeyword{MVC}
+  \foreignkeyword{TDD}
+  \foreignkeyword{RESTful}
+
+
+  \maketitle
+
+  \frontmatter
+  \include{thanks}
+  \include{resumo}
+  \include{abstract}
+  \tableofcontents
+  \listoffigures
+  \listoftables
+  \printloabbreviations
+
+  \mainmatter
+  \include{chap01}
+  \include{chap02}
+  \include{chap03}
+  \include{chap04}
+  \include{chap05}
+
+  \backmatter
+  \bibliographystyle{coppetex/coppe-unsrt}
+  \bibliography{projeto}
+\end{document}
