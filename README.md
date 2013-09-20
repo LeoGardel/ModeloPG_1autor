@@ -3,6 +3,10 @@ ModeloPG_1autor
 
 Modelo de Projeto de Graduação para Engenharia de Computação e Informação seguindo o Padrão Coppetex (versão 2.1.1), adaptado para funcionar em Windows. Somente 1 autor é considerado neste projeto.
 
+Caso o trabalho possua dois autores, utilizar o projeto abaixo
+
+https://github.com/LeoGardel/ModeloPG_2autores
+
 Como Utilizar (Windows)
 --------------
 
