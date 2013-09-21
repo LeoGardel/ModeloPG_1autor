@@ -18,4 +18,4 @@ Após instalar, basta abrir o arquivo <tt>projeto.tex</tt> (com o TeXworks) e ex
 
 Como o editor TeXworks não possui corretor ortográfico, é recomendado que seja utilizado outro *software* para realizar tal tarefa.
 
-Para seguir o padrão CoppeTeX, é necessário que o projeto contenha uma lista de abreviaturas, entretanto, por algum motivo (provavelmente por alguma incompatibilidade do arquivo "coppe.cls" com o Windows), tal lista não é gerada trivialmente. Para que esta fosse produzida, foi necessário executar os 5 comandos destritos no arquivo <tt>MAKEFILE</tt> (na seção "all") em um sistema Linux.
+Para seguir o padrão CoppeTeX, é necessário que o projeto contenha uma lista de abreviaturas, entretanto, por algum motivo (provavelmente por algum problema no arquivo "coppe.cls" ou incompatibilidade deste com o compilador MikTeX), tal lista não é gerada trivialmente. Para que esta fosse produzida, foi necessário executar os 5 comandos descritos no arquivo <tt>MAKEFILE</tt> (na seção "all") em um sistema Linux.
